@@ -1,0 +1,54 @@
+/*El CSS clásico donde se establecen las propiedades visuales de cada clase*/
+.row{
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    color : #ccc;
+    text-decoration: line-through;
+}
+
+/* Sirve para tachar los elementos seleccionados */
+.completed{
+    color : rgb(0, 0, 0);
+    text-decoration:none;
+}
+/* Sirve para tachar los elementos del total seleccionados */
+.completed .total{
+    color:green;
+}
+
+div{
+    padding: 5px 0px;
+}
+
+
+.form-check{
+    display:flex  ;
+    width: 50%;
+    padding: 5px;
+}
+
+.price{
+    width: 15%;
+    padding: 0 5px;
+}
+
+.quantity{
+    width: 10%;
+    padding: 0 5px;
+
+}
+
+.total{
+    width: 15%;
+    font-weight: bolder;
+    color: #ccc;
+    padding: 0 5px;
+}
+
+.actions{
+    width: 10%;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0 5px;
+}

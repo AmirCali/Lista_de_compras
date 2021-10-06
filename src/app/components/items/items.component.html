@@ -1,0 +1,18 @@
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#" routerLink="/">Home</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#" routerLink="/add">Nuevo</a>
+    </li>
+</ul>
+
+<div class="container">
+    <app-total  mensaje = "Total por pagar:" [total]="total" ></app-total>     <!--falta el :   total="total"-->
+    <app-item
+    *ngFor='let item of items'
+    [item]="item"
+    (deleteItem)="deleteItem($event)"
+    (toggleItem)="toggleItem($event)"></app-item>
+</div>
+

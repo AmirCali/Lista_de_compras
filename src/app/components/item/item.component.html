@@ -1,0 +1,29 @@
+<!--en item.component.html se establecen las clases y las propiedades de estas -->
+<div class="row" [ngClass]="{'completed': item.completed}">  <!--con ngClass se agrega el estilo 'completed'si se cumple la condición de que item.completed sea true, y si es false se quita el estilo-->
+
+    <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" [checked]="item.completed" (change)= "onToggle(item)" id="flexSwitchCheckChecked" checked>
+        <label class="form-check-label" for="flexSwitchCheckChecked">{{item.title}}</label>
+    </div>
+
+
+    <div class="price">
+        {{item.price | currency}}
+    </div>
+
+    <div class="quantity">
+        {{item.quantity}}
+    </div>
+
+    <div class="total">
+        {{item.price * item.quantity | currency}}
+    </div>
+
+    <div class="actions">
+        <button (click)="onDelete(item)" class="btn btn-dark">
+            Eliminar
+        </button>
+    </div>
+
+
+</div>
