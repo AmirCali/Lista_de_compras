@@ -21,7 +21,9 @@ export class ItemComponent implements OnInit {
 
   //onDelete es la función que elimina los elementos
   onDelete(item: Item){
-    this.deleteItem.emit(item);  }
+    this.deleteItem.emit(item);
+    
+  }
 
   //item.completed es lo inverso  a item.completed y se cambia para modificar el checkbox
   onToggle(item: Item){

@@ -9,7 +9,7 @@ import { ItemService } from 'src/app/services/item.service';
   styleUrls: ['./add-item.component.css']
 })
 export class AddItemComponent implements OnInit {
-  id:string='';
+  id:number=0;
   title:string = '';
   price:number = 0;
   quantity:number = 0;
@@ -20,6 +20,7 @@ export class AddItemComponent implements OnInit {
 
   onSubmit(){
     const item = new Item();
+    item.id=this.id;
     item.title=this.title;
     item.price=this.price;
     item.quantity=this.quantity;

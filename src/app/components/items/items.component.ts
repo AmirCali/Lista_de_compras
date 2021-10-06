@@ -23,7 +23,7 @@ export class ItemsComponent implements OnInit {
 
   }
     deleteItem(item: Item){
-      this.items = this.items.filter(x => x.id != item.id) //con esta función se filtran y se nos muestran todos los elementos cno una ID diferente a la que especifiquemos
+      this.items = this.items.filter(x => x.id != item.id) //con esta función se filtran y se nos muestran todos los elementos con una ID diferente a la que especifiquemos
       this.getTotal();
   }
 
